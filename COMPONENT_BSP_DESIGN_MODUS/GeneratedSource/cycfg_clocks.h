@@ -1,8 +1,8 @@
 /*******************************************************************************
-* File Name: cycfg.c
+* File Name: cycfg_clocks.h
 *
 * Description:
-* Wrapper function to initialize all generated code.
+* Clock configuration
 * This file was automatically generated and should not be modified.
 * Tools Package 2.3.0.4276
 * mtb-pdl-cat2 1.2.0.0
@@ -26,13 +26,44 @@
 * limitations under the License.
 ********************************************************************************/
 
-#include "cycfg.h"
+#if !defined(CYCFG_CLOCKS_H)
+#define CYCFG_CLOCKS_H
 
-void init_cycfg_all(void)
-{
-	init_cycfg_system();
-	init_cycfg_clocks();
-	init_cycfg_routing();
-	init_cycfg_peripherals();
-	init_cycfg_pins();
+#include "cycfg_notices.h"
+#include "cy_sysclk.h"
+#if defined (CY_USING_HAL)
+	#include "cyhal_hwmgr.h"
+#endif //defined (CY_USING_HAL)
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+#define CLK_PDRX_ENABLED 1U
+#define CLK_PDRX_HW CY_SYSCLK_DIV_8_BIT
+#define CLK_PDRX_NUM 0U
+#define CLK_PDTX_ENABLED 1U
+#define CLK_PDTX_HW CY_SYSCLK_DIV_8_BIT
+#define CLK_PDTX_NUM 1U
+#define CLK_PDSAR_ENABLED 1U
+#define CLK_PDSAR_HW CY_SYSCLK_DIV_8_BIT
+#define CLK_PDSAR_NUM 2U
+
+#if defined (CY_USING_HAL)
+	extern const cyhal_resource_inst_t CLK_PDRX_obj;
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	extern const cyhal_resource_inst_t CLK_PDTX_obj;
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	extern const cyhal_resource_inst_t CLK_PDSAR_obj;
+#endif //defined (CY_USING_HAL)
+
+void init_cycfg_clocks(void);
+
+#if defined(__cplusplus)
 }
+#endif
+
+
+#endif /* CYCFG_CLOCKS_H */

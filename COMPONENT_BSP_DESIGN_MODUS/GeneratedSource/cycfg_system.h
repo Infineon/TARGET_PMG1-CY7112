@@ -4,10 +4,10 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.0.2801
-* mtb-pdl-cat2 1.1.0.2839
-* personalities 3.0.0.0
-* udd 3.0.0.912
+* Tools Package 2.3.0.4276
+* mtb-pdl-cat2 1.2.0.0
+* personalities 5.0.0.0
+* udd 3.0.0.1156
 *
 ********************************************************************************
 * Copyright 2021 Cypress Semiconductor Corporation
@@ -46,10 +46,13 @@ extern "C" {
 #define CY_CFG_SYSCLK_PLL_EN_ERROR 5
 #define CY_CFG_SYSCLK_HF_SRC_ERROR 6
 #define srss_0_clock_0_hfclk_0_ENABLED 1U
+#define srss_0_clock_0_ilo_0_ENABLED 1U
 #define srss_0_clock_0_imo_0_ENABLED 1U
 #define CY_CFG_SYSCLK_IMO_FREQ_HZ 48000000UL
 #define CY_CFG_SYSCLK_IMO_FREQ_MHZ 48UL
 #define CY_CFG_SYSCLK_IMO_FREQ CY_SYSCLK_IMO_48MHZ
+#define srss_0_clock_0_lfclk_0_ENABLED 1U
+#define CY_CFG_SYSCLK_CLKLF_FREQ_HZ 40000
 #define srss_0_clock_0_sysclk_0_ENABLED 1U
 #define srss_0_power_0_ENABLED 1U
 #define CY_CFG_PWR_MODE_ACTIVE 0x04UL

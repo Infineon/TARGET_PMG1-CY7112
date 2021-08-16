@@ -4,10 +4,10 @@
 * Description:
 * Establishes all necessary connections between hardware elements.
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.0.2801
-* mtb-pdl-cat2 1.1.0.2839
-* personalities 3.0.0.0
-* udd 3.0.0.912
+* Tools Package 2.3.0.4276
+* mtb-pdl-cat2 1.2.0.0
+* personalities 5.0.0.0
+* udd 3.0.0.1156
 *
 ********************************************************************************
 * Copyright 2021 Cypress Semiconductor Corporation
@@ -38,6 +38,8 @@ static inline void init_cycfg_routing(void) {}
 #define init_cycfg_connectivity() init_cycfg_routing()
 #define ioss_0_port_2_pin_0_HSIOM P2_0_CPUSS_SWD_DATA
 #define ioss_0_port_2_pin_1_HSIOM P2_1_CPUSS_SWD_CLK
+#define ioss_0_port_4_pin_0_AUX USBDP_USB_DP
+#define ioss_0_port_4_pin_1_AUX USBDM_USB_DM
 
 #if defined(__cplusplus)
 }

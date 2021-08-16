@@ -4,10 +4,10 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.0.2801
-* mtb-pdl-cat2 1.1.0.2839
-* personalities 3.0.0.0
-* udd 3.0.0.912
+* Tools Package 2.3.0.4276
+* mtb-pdl-cat2 1.2.0.0
+* personalities 5.0.0.0
+* udd 3.0.0.1156
 *
 ********************************************************************************
 * Copyright 2021 Cypress Semiconductor Corporation
@@ -32,7 +32,9 @@
 #define CY_CFG_SYSCLK_HFCLK_FREQ_MHZ 48UL
 #define CY_CFG_SYSCLK_HFCLK_SOURCE CY_SYSCLK_CLKHF_IN_IMO
 #define CY_CFG_SYSCLK_HFCLK_DIVIDER CY_SYSCLK_NO_DIV
+#define CY_CFG_SYSCLK_ILO_ENABLED 1
 #define CY_CFG_SYSCLK_IMO_ENABLED 1
+#define CY_CFG_SYSCLK_CLKLF_ENABLED 1
 #define CY_CFG_SYSCLK_CLKSYS_ENABLED 1
 #define CY_CFG_SYSCLK_CLKSYS_DIVIDER CY_SYSCLK_NO_DIV
 #define CY_CFG_SYSCLK_CLKSYS_FREQ_MHZ 48UL
@@ -51,6 +53,10 @@ __STATIC_INLINE void Cy_SysClk_ClkHfInit()
         cycfg_ClockStartupError(CY_CFG_SYSCLK_HF_SRC_ERROR, status);
     }
     Cy_SysClk_ClkHfSetDivider(CY_CFG_SYSCLK_HFCLK_DIVIDER);
+}
+__STATIC_INLINE void Cy_SysClk_IloInit()
+{
+    Cy_SysClk_IloEnable();
 }
 __STATIC_INLINE void Cy_SysClk_ImoInit()
 {

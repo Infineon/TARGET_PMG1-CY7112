@@ -4,10 +4,10 @@
 * Description:
 * Pin configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.0.2801
-* mtb-pdl-cat2 1.1.0.2839
-* personalities 3.0.0.0
-* udd 3.0.0.912
+* Tools Package 2.3.0.4276
+* mtb-pdl-cat2 1.2.0.0
+* personalities 5.0.0.0
+* udd 3.0.0.1156
 *
 ********************************************************************************
 * Copyright 2021 Cypress Semiconductor Corporation
@@ -114,6 +114,60 @@ extern "C" {
 #if defined (CY_USING_HAL)
 	#define CYBSP_SWDCK_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
 #endif //defined (CY_USING_HAL)
+#define CYBSP_USB_DP_ENABLED 1U
+#define CYBSP_USB_DP_PORT GPIO_PRT4
+#define CYBSP_USB_DP_PORT_NUM 4U
+#define CYBSP_USB_DP_PIN 0U
+#define CYBSP_USB_DP_NUM 0U
+#define CYBSP_USB_DP_DRIVEMODE CY_GPIO_DM_ANALOG
+#define CYBSP_USB_DP_INIT_DRIVESTATE 1
+#ifndef ioss_0_port_4_pin_0_HSIOM
+	#define ioss_0_port_4_pin_0_HSIOM HSIOM_SEL_GPIO
+#endif
+#define CYBSP_USB_DP_HSIOM ioss_0_port_4_pin_0_HSIOM
+#define CYBSP_USB_DP_IRQ ioss_interrupts_gpio_4_IRQn
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DP_HAL_PORT_PIN P4_0
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DP P4_0
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DP_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DP_HAL_DIR CYHAL_GPIO_DIR_INPUT 
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DP_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_ANALOG
+#endif //defined (CY_USING_HAL)
+#define CYBSP_USB_DM_ENABLED 1U
+#define CYBSP_USB_DM_PORT GPIO_PRT4
+#define CYBSP_USB_DM_PORT_NUM 4U
+#define CYBSP_USB_DM_PIN 1U
+#define CYBSP_USB_DM_NUM 1U
+#define CYBSP_USB_DM_DRIVEMODE CY_GPIO_DM_ANALOG
+#define CYBSP_USB_DM_INIT_DRIVESTATE 1
+#ifndef ioss_0_port_4_pin_1_HSIOM
+	#define ioss_0_port_4_pin_1_HSIOM HSIOM_SEL_GPIO
+#endif
+#define CYBSP_USB_DM_HSIOM ioss_0_port_4_pin_1_HSIOM
+#define CYBSP_USB_DM_IRQ ioss_interrupts_gpio_4_IRQn
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DM_HAL_PORT_PIN P4_1
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DM P4_1
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DM_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DM_HAL_DIR CYHAL_GPIO_DIR_INPUT 
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+	#define CYBSP_USB_DM_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_ANALOG
+#endif //defined (CY_USING_HAL)
 
 extern const cy_stc_gpio_pin_config_t CYBSP_SWDIO_config;
 #if defined (CY_USING_HAL)
@@ -122,6 +176,14 @@ extern const cy_stc_gpio_pin_config_t CYBSP_SWDIO_config;
 extern const cy_stc_gpio_pin_config_t CYBSP_SWDCK_config;
 #if defined (CY_USING_HAL)
 	extern const cyhal_resource_inst_t CYBSP_SWDCK_obj;
+#endif //defined (CY_USING_HAL)
+extern const cy_stc_gpio_pin_config_t CYBSP_USB_DP_config;
+#if defined (CY_USING_HAL)
+	extern const cyhal_resource_inst_t CYBSP_USB_DP_obj;
+#endif //defined (CY_USING_HAL)
+extern const cy_stc_gpio_pin_config_t CYBSP_USB_DM_config;
+#if defined (CY_USING_HAL)
+	extern const cyhal_resource_inst_t CYBSP_USB_DM_obj;
 #endif //defined (CY_USING_HAL)
 
 void init_cycfg_pins(void);
